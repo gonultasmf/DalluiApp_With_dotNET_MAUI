@@ -2,7 +2,7 @@
 
 namespace DalluiApp;
 
-[MauiMarkup(typeof(CoverFlowView), typeof(CardsView), typeof(CoverFlowProcessor), typeof(CarouselProcessor))]
+[MauiMarkup(typeof(CoverFlowView), typeof(CardsView))]
 public static class MauiProgram
 {
     public static MauiApp CreateMauiApp()
@@ -11,6 +11,7 @@ public static class MauiProgram
         builder
             .UseMauiApp<App>()
             .UseCardsView()
+            .UseMauiCommunityToolkit()
             .ConfigureFonts(fonts =>
             {
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");

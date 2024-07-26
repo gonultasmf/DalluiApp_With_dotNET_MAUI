@@ -165,13 +165,34 @@ public partial class DashboardView : FmgLibContentPage
                                         .Text(e => e.Path("MainKeyword"))
                                         .FontFamily("NexaHeavy")
                                         .FontSize(25)
+                                        .TextColor(White),
+
+                                        new Label()
+                                        .FontFamily("NexaLight")
+                                        .FontSize(15)
+                                        .Text(e => e.Path("Keywords").Converter(new ListToStringConverter() { Separator = "," }))
                                         .TextColor(White)
                                     )
                                 )
                             )
                         )
                     )
-                 )
+                 ),
+
+                new Border()
+                .Row(4)
+                .Margin(0,15,0,0)
+                .AlignEnd()
+                .StrokeShape(new RoundRectangle().CornerRadius(new CornerRadius(55,0,0,0)))
+                .WidthRequest(250)
+                .Content(
+                    new Button()
+                    .BackgroundColor(Color.FromArgb("#E8FF8E"))
+                    .FontFamily("NexaHeavy")
+                    .FontSize(16)
+                    .Text("Create new Image")
+                    .TextColor(Color.FromArgb("#101216"))
+                )
             )
         );
     }

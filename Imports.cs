@@ -4,6 +4,8 @@ global using DalluiApp.Models;
 
 global using PanCardView;
 global using PanCardView.Processors;
+global using CommunityToolkit.Maui;
+global using CommunityToolkit.Maui.Converters;
 
 // Markup FmgLib
 global using FmgLib.MauiMarkup;
