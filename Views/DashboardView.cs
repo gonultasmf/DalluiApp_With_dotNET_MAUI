@@ -1,7 +1,4 @@
-﻿using DalluiApp.Models;
-using Microsoft.Maui.Controls.Shapes;
-using PanCardView.Processors;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 
 namespace DalluiApp.Views;
 
@@ -187,11 +184,16 @@ public partial class DashboardView : FmgLibContentPage
                 .WidthRequest(250)
                 .Content(
                     new Button()
+                    .CornerRadius(0)
                     .BackgroundColor(Color.FromArgb("#E8FF8E"))
                     .FontFamily("NexaHeavy")
                     .FontSize(16)
                     .Text("Create new Image")
                     .TextColor(Color.FromArgb("#101216"))
+                    .OnClicked(async (sender, e) =>
+                    {
+                        await AppShell.Current.GoToAsync($"//{nameof(GenerationOptionsView)}");
+                    })
                 )
             )
         );

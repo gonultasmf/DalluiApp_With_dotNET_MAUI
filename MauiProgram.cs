@@ -2,7 +2,7 @@
 
 namespace DalluiApp;
 
-[MauiMarkup(typeof(CoverFlowView), typeof(CardsView))]
+[MauiMarkup(typeof(CoverFlowView), typeof(CardsView), typeof(SKLottieView), typeof(SKAnimatedSurfaceView), typeof(SKFileLottieImageSource))]
 public static class MauiProgram
 {
     public static MauiApp CreateMauiApp()
@@ -11,6 +11,7 @@ public static class MauiProgram
         builder
             .UseMauiApp<App>()
             .UseCardsView()
+            .UseSkiaSharp()
             .UseMauiCommunityToolkit()
             .ConfigureFonts(fonts =>
             {
@@ -25,7 +26,9 @@ public static class MauiProgram
         builder.Services
             .AddSingleton<App>()
             .AddSingleton<AppShell>()
-            .AddScoped<MainPage>();
+            .AddScoped<DashboardView>()
+            .AddScoped<GenerationOptionsView>()
+            .AddScoped<ImageGeneratorView>();
 
         return builder.Build();
     }

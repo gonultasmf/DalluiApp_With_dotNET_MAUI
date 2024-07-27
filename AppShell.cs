@@ -6,11 +6,22 @@
         {
             this
             .FlyoutBehavior(FlyoutBehavior.Disabled)
+            .ShellNavBarIsVisible(false)
             .Items(
                 new ShellContent()
-                .Title("Home")
-                .ContentTemplate(() => new MainPage())
-                .Route(nameof(MainPage))
+                .Title("DashboardView")
+                .ContentTemplate(() => new DashboardView())
+                .Route(nameof(DashboardView)),
+
+                new ShellContent()
+                .Title("GenerationOptionsView")
+                .ContentTemplate(() => new GenerationOptionsView())
+                .Route(nameof(GenerationOptionsView)),
+
+                new ShellContent()
+                .Title("ImageGeneratorView")
+                .ContentTemplate(() => new ImageGeneratorView())
+                .Route(nameof(ImageGeneratorView))
             );
         }
     }

@@ -6,6 +6,6 @@ public partial class App : Application
     {
         this
         .Resources(AppStyles.Default)
-        .MainPage(new DashboardView());
+        .MainPage(new AppShell());
     }
 }
