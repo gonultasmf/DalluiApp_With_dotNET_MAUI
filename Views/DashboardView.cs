@@ -32,19 +32,19 @@ public partial class DashboardView : FmgLibContentPage
                         new Rectangle()
                         .Fill(Color.FromArgb("#CACDD3"))
                         .SizeRequest(25,2)
-                        .AlignStart(),
+                        .AlignTopLeft(),
 
                          new Rectangle()
                          .Margin(0,5,0,0)
                         .Fill(Color.FromArgb("#CACDD3"))
                         .SizeRequest(35, 2)
-                        .AlignStart()
+                        .AlignTopLeft()
                     ),
 
                     new Border()
                     .Column(1)
                     .SizeRequest(75)
-                    .AlignEnd()
+                    .AlignBottomRight()
                     .StrokeShape(new RoundRectangle().CornerRadius(new CornerRadius(80)))
                     .Content(
                         new Image()
@@ -93,7 +93,7 @@ public partial class DashboardView : FmgLibContentPage
                             .RowSpan(2)
                             .Margin(5,0,0,0)
                             .SizeRequest(50)
-                            .AlignStart()
+                            .AlignLeft()
                             .StrokeShape(new RoundRectangle().CornerRadius(80))
                             .StrokeThickness(0)
                             .Content(
@@ -121,12 +121,12 @@ public partial class DashboardView : FmgLibContentPage
                                 .FontSize(12)
                                 .Text(e => e.Path("NoPhotos").StringFormat("{0} pictures"))
                                 .TextColor(Color.FromArgb("#869CBD"))
-                                .AlignStart()
+                                .AlignLeft()
                             )
                         )
                     )
                 ),
-
+                
                 new CoverFlowView(new CoverFlowProcessor() { OpacityFactor = 0.25, ScaleFactor = 0.75 })
                 .Row(3)
                 .Margin(-25,0,25,0)
@@ -179,7 +179,7 @@ public partial class DashboardView : FmgLibContentPage
                 new Border()
                 .Row(4)
                 .Margin(0,15,0,0)
-                .AlignEnd()
+                .AlignBottomRight()
                 .StrokeShape(new RoundRectangle().CornerRadius(new CornerRadius(55,0,0,0)))
                 .WidthRequest(250)
                 .Content(

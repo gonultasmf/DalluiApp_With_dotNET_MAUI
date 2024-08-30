@@ -16,4 +16,4 @@ global using static Microsoft.Maui.Controls.FontAttributes;
 global using static Microsoft.Maui.Controls.LayoutAlignment;
 // Static
 global using static Microsoft.Maui.Graphics.Colors;
-global using MC = Microsoft.Maui.Controls;
+global using Microsoft.Maui.Controls;

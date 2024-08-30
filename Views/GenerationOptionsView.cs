@@ -2,6 +2,8 @@
 using Microsoft.Maui.Controls.Compatibility.Platform.Android;
 #endif
 
+using FmgLib.MauiMarkup.Core;
+
 namespace DalluiApp.Views;
 
 public partial class GenerationOptionsView : FmgLibContentPage
@@ -55,7 +57,7 @@ public partial class GenerationOptionsView : FmgLibContentPage
                 .ItemTemplate(
                     new DataTemplate(() => 
                         new Grid().SizeRequest(150,50).Children(
-                            new RoundRectangle().CornerRadius(35).Fill(Color.FromArgb("#242529")),
+                            new RoundRectangle().CornerRadius(35).Fill("#242529".ToColor()),
                             new Label().Center().TextColor(White).Text(e => e.Path("."))
                         )
                     )
@@ -87,7 +89,7 @@ public partial class GenerationOptionsView : FmgLibContentPage
                             .Margin(0,0,0,10)
                             .FontFamily("NexaHeavy")
                             .FontSize(15)
-                            .AlignEnd()
+                            .AlignBottomRight()
                             .HorizontalTextAlignment(TextAlignment.Center)
                             .TextColor(White)
                             .Text(e => e.Path("Name"))
