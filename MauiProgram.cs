@@ -2,7 +2,7 @@
 
 namespace DalluiApp;
 
-[MauiMarkup(typeof(CoverFlowView), typeof(CardsView), typeof(SKLottieView), typeof(SKAnimatedSurfaceView), typeof(SKFileLottieImageSource))]
+// [MauiMarkup(typeof(CoverFlowView), typeof(CardsView), typeof(SKLottieView), typeof(SKAnimatedSurfaceView), typeof(SKFileLottieImageSource))]
 public static class MauiProgram
 {
     public static MauiApp CreateMauiApp()

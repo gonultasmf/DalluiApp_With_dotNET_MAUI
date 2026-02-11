@@ -151,14 +151,14 @@ public partial class ImageGeneratorView : FmgLibContentPage
         await Task.Delay(2000);
 
         await Task.WhenAny(
-             imageAnimation.ScaleTo(1.1, 1000),
-             imageAnimation.FadeTo(0, 1000),
-             borderTime.ScaleTo(1, 1000),
-             borderTime.FadeTo(1, 1000)
+             imageAnimation.ScaleToAsync(1.1, 1000),
+             imageAnimation.FadeToAsync(0, 1000),
+             borderTime.ScaleToAsync(1, 1000),
+             borderTime.FadeToAsync(1, 1000)
              );
 
-        await borderTime.FadeTo(0, 300);
-        await btnFinish.ScaleTo(1, 1000);
+        await borderTime.FadeToAsync(0, 300);
+        await btnFinish.ScaleToAsync(1, 1000);
 
     }
 }
