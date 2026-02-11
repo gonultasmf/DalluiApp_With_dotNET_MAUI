@@ -87,7 +87,7 @@
 	<ItemGroup>
 		<PackageReference Include="CardsView.Maui" Version="1.1.2" />
 		<PackageReference Include="CommunityToolkit.Maui" Version="14.0.0" />
-		<PackageReference Include="FmgLib.MauiMarkup" Version="10.0.0-preview17" />
+		<PackageReference Include="FmgLib.MauiMarkup" Version="10.0.1-preview2" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="10.*" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="10.*" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="10.*" />
